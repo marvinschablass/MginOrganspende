@@ -8,7 +8,7 @@ puts "Geben Sie bitte die Blutgruppe des Spenders wie folgt ein (A+, B+, A-, B-,
 
 BlutgruppeSpender = gets.chomp
 
-if BlutgruppePatient and BlutgruppeSpender == "A+" || BlutgruppePatient and BlutgruppeSpender == "B+" || BlutgruppePatient and BlutgruppeSpender == "A-" || BlutgruppePatient and BlutgruppeSpender == "B-" || BlutgruppePatient and BlutgruppeSpender == "Ab+" || BlutgruppePatient and BlutgruppeSpender == "AB-" || BlutgruppePatient and BlutgruppeSpender == "0-" || BlutgruppePatient == "0-" || BlutgruppeSpender == "0-"
+if BlutgruppeSpender == BlutgruppePatient || BlutgruppePatient == "0+" || BlutgruppeSpender == "0+"
   puts"kompatibel"
   puts"Wollen Sie ein Datum für die Operation eintragen [ja/nein]"
   Antwort = gets.chomp
@@ -23,4 +23,4 @@ if BlutgruppePatient and BlutgruppeSpender == "A+" || BlutgruppePatient and Blut
   end
 else
   puts "Leider nicht kompatibel"
-  end
+end
