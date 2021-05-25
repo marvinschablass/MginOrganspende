@@ -1,6 +1,11 @@
+# frozen_string_literal: true
+
 puts "Geben Sie bitte die Blutgruppe des Patienten wie folgt ein (A+, B+, A-, B-, AB-, AB+, 0-, 0+)"
+
 BlutgruppePatient = gets.chomp
+
 puts "Geben Sie bitte die Blutgruppe des Spenders wie folgt ein (A+, B+, A-, B-, AB-, AB+, 0-, 0+)"
+
 BlutgruppeSpender = gets.chomp
 
 if BlutgruppePatient and BlutgruppeSpender == 'A+' || BlutgruppePatient and BlutgruppeSpender == 'B+' || BlutgruppePatient and BlutgruppeSpender == 'A-' || BlutgruppePatient and BlutgruppeSpender == 'B-' || BlutgruppePatient and BlutgruppeSpender == 'Ab+' || BlutgruppePatient and BlutgruppeSpender == 'AB-' || BlutgruppePatient and BlutgruppeSpender == '0-' || BlutgruppePatient == '0-' || BlutgruppeSpender == '0-'
