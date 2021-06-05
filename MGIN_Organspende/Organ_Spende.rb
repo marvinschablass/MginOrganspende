@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 puts "Bitte geben Sie den Vornamen des Patienten ein"
 
 VornamePatient = gets.chomp
