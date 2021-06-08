@@ -1,6 +1,6 @@
-class Organspende
-
 # frozen_string_literal: true
+
+class Organspende
 
 def abfrage_patient_blutgruppe(blutgruppePatient)
   if BlutgruppePatient == "A+" or BlutgruppePatient == "A-" or BlutgruppePatient == "B+" or BlutgruppePatient == "B-" or BlutgruppePatient == "AB+" or BlutgruppePatient == "AB-" or BlutgruppePatient == "0+" or BlutgruppePatient == "0-"
