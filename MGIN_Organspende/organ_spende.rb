@@ -1,3 +1,5 @@
+class Organspende
+
 # frozen_string_literal: true
 
 def abfrage_patient_blutgruppe(blutgruppePatient)
@@ -97,4 +99,5 @@ if abfrage_patient_blutgruppe(BlutgruppePatient)
       end
     end
   end
+end
 end
