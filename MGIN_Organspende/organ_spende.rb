@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-def AbfragePatientBlutgruppe(blutgruppePatient)
+def abfrage_patient_blutgruppe(blutgruppePatient)
   if BlutgruppePatient == "A+" or BlutgruppePatient == "A-" or BlutgruppePatient == "B+" or BlutgruppePatient == "B-" or BlutgruppePatient == "AB+" or BlutgruppePatient == "AB-" or BlutgruppePatient == "0+" or BlutgruppePatient == "0-"
     return true
 
@@ -9,7 +9,7 @@ def AbfragePatientBlutgruppe(blutgruppePatient)
   end
 end
 
-def AbfrageSpenderBlutgruppe(blutgruppeSpender)
+def abfrage_spender_blutgruppe(blutgruppeSpender)
   if BlutgruppeSpender == "A+" or BlutgruppeSpender == "A-" or BlutgruppeSpender == "B+" or BlutgruppeSpender == "B-" or BlutgruppeSpender == "AB+" or BlutgruppeSpender == "AB-" or BlutgruppeSpender == "0+" or BlutgruppeSpender == "0-"
     return true
 
@@ -18,7 +18,7 @@ def AbfrageSpenderBlutgruppe(blutgruppeSpender)
   end
 end
 
-def Kompatibilität(blutgruppePatient,blutgruppeSpender)
+def kompatibilität_blutgruppe(blutgruppePatient,blutgruppeSpender)
   if BlutgruppePatient == BlutgruppeSpender or BlutgruppePatient == "0+" or BlutgruppeSpender =="0+"
     return "Kompatibel"
 
@@ -50,7 +50,7 @@ puts "Geben Sie bitte die Blutgruppe des Patienten wie folgt ein (A+, B+, A-, B-
 
 BlutgruppePatient = gets.chomp
 
-if AbfragePatientBlutgruppe(BlutgruppePatient)
+if abfrage_patient_blutgruppe(BlutgruppePatient)
 
 
   puts "Bitte geben Sie den Vornamen des Spenders ein"
@@ -73,10 +73,10 @@ if AbfragePatientBlutgruppe(BlutgruppePatient)
 
   BlutgruppeSpender = gets.chomp
 
-  if  AbfrageSpenderBlutgruppe(BlutgruppeSpender)
+  if  abfrage_spender_blutgruppe(BlutgruppeSpender)
 
 
-    if Kompatibilität(BlutgruppePatient,BlutgruppeSpender)
+    if kompatibilität_blutgruppe(BlutgruppePatient,BlutgruppeSpender)
 
       puts"Wollen Sie ein Datum für die Operation eintragen [ja/nein]"
       Antwort = gets.chomp
