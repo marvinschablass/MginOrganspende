@@ -18,7 +18,7 @@ def abfrage_spender_blutgruppe(blutgruppeSpender)
   end
 end
 
-def kompatibilität_blutgruppe(blutgruppePatient,blutgruppeSpender)
+def kompatibilitaet_blutgruppe(blutgruppePatient,blutgruppeSpender)
   if BlutgruppePatient == BlutgruppeSpender or BlutgruppePatient == "0+" or BlutgruppeSpender =="0+"
     return "Kompatibel"
 
@@ -76,7 +76,7 @@ if abfrage_patient_blutgruppe(BlutgruppePatient)
   if  abfrage_spender_blutgruppe(BlutgruppeSpender)
 
 
-    if kompatibilität_blutgruppe(BlutgruppePatient,BlutgruppeSpender)
+    if kompatibilitaet_blutgruppe(BlutgruppePatient,BlutgruppeSpender)
 
       puts"Wollen Sie ein Datum für die Operation eintragen [ja/nein]"
       Antwort = gets.chomp
