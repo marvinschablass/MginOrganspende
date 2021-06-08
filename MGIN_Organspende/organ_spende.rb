@@ -55,8 +55,8 @@ if BlutgruppeSpender == BlutgruppePatient || BlutgruppePatient == "0+" || Blutgr
     puts "Tragen Sie bitte ein Datum ein"
     Datum = gets.chomp
     puts"Geschafft! Die Operation findet am #{Datum} statt."
-    puts"Spender #{VornameSpender} #{NachnameSpender} / Alter #{AlterSpender} / Blutgruppe #{BlutgruppeSpender} / Sozialversicherungsnummer #{SvnrSpender}"
-    puts"Patient #{VornamePatient} #{NachnamePatient} / Alter #{AlterPatient} / Blutgruppe #{BlutgruppePatient} / Sozialversicherungsnummer #{SvnrPatient}"
+    puts"Spender: #{VornameSpender} #{NachnameSpender} / Alter: #{AlterSpender} / Blutgruppe: #{BlutgruppeSpender} / Sozialversicherungsnummer: #{SvnrSpender}"
+    puts"Patient: #{VornamePatient} #{NachnamePatient} / Alter: #{AlterPatient} / Blutgruppe: #{BlutgruppePatient} / Sozialversicherungsnummer: #{SvnrPatient}"
   else
     puts "Tragen Sie es bitte bald ein passendes Datum ein"
   end
