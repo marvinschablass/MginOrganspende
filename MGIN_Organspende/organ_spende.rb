@@ -2,102 +2,102 @@
 
 class Organspende
 
-def abfrage_patient_blutgruppe(blutgruppePatient)
-  if BlutgruppePatient == "A+" or BlutgruppePatient == "A-" or BlutgruppePatient == "B+" or BlutgruppePatient == "B-" or BlutgruppePatient == "AB+" or BlutgruppePatient == "AB-" or BlutgruppePatient == "0+" or BlutgruppePatient == "0-"
-    return true
+  def self.abfrage_patient_blutgruppe(blutgruppePatient)
+    if BlutgruppePatient == "A+" or BlutgruppePatient == "A-" or BlutgruppePatient == "B+" or BlutgruppePatient == "B-" or BlutgruppePatient == "AB+" or BlutgruppePatient == "AB-" or BlutgruppePatient == "0+" or BlutgruppePatient == "0-"
+      return true
 
-  else
-    puts"Keine gültige Blutgruppe"
+    else
+      puts"Keine gültige Blutgruppe"
+    end
   end
-end
 
-def abfrage_spender_blutgruppe(blutgruppeSpender)
-  if BlutgruppeSpender == "A+" or BlutgruppeSpender == "A-" or BlutgruppeSpender == "B+" or BlutgruppeSpender == "B-" or BlutgruppeSpender == "AB+" or BlutgruppeSpender == "AB-" or BlutgruppeSpender == "0+" or BlutgruppeSpender == "0-"
-    return true
+  def self.abfrage_spender_blutgruppe(blutgruppeSpender)
+    if BlutgruppeSpender == "A+" or BlutgruppeSpender == "A-" or BlutgruppeSpender == "B+" or BlutgruppeSpender == "B-" or BlutgruppeSpender == "AB+" or BlutgruppeSpender == "AB-" or BlutgruppeSpender == "0+" or BlutgruppeSpender == "0-"
+      return true
 
-  else
-    puts "Keine gültige Blutgruppe"
+    else
+      puts "Keine gültige Blutgruppe"
+    end
   end
-end
 
-def kompatibilitaet_blutgruppe(blutgruppePatient, blutgruppeSpender)
-  if BlutgruppePatient == BlutgruppeSpender or BlutgruppePatient == "0+" or BlutgruppeSpender =="0+"
-    return "Kompatibel"
+  def self.kompatibilitaet_blutgruppe(blutgruppePatient, blutgruppeSpender)
+    if BlutgruppePatient == BlutgruppeSpender or BlutgruppePatient == "0+" or BlutgruppeSpender =="0+"
+      return "Kompatibel"
 
-  else
+    else
 
-    puts "Leider nicht kompatibel"
+      puts "Leider nicht kompatibel"
+    end
   end
-end
 
 
 
-puts "Bitte geben Sie den Vornamen des Patienten ein"
+  puts "Bitte geben Sie den Vornamen des Patienten ein"
 
-VornamePatient = gets.chomp
+  VornamePatient = gets.chomp
 
-puts"Bitte geben Sie den Nachnamen des Patienten ein"
+  puts"Bitte geben Sie den Nachnamen des Patienten ein"
 
-NachnamePatient = gets.chomp
+  NachnamePatient = gets.chomp
 
-puts"Bitte geben Sie das Alter des Patienten ein"
+  puts"Bitte geben Sie das Alter des Patienten ein"
 
-AlterPatient = gets.chomp
+  AlterPatient = gets.chomp
 
-puts"Bitte geben Sie die Sozoialversicherungsnummer des Patienten ein"
+  puts"Bitte geben Sie die Sozoialversicherungsnummer des Patienten ein"
 
-SvnrPatient = gets.chomp
+  SvnrPatient = gets.chomp
 
-puts "Geben Sie bitte die Blutgruppe des Patienten wie folgt ein (A+, B+, A-, B-, AB-, AB+, 0-, 0+)"
+  puts "Geben Sie bitte die Blutgruppe des Patienten wie folgt ein (A+, B+, A-, B-, AB-, AB+, 0-, 0+)"
 
-BlutgruppePatient = gets.chomp
+  BlutgruppePatient = gets.chomp
 
-if abfrage_patient_blutgruppe(BlutgruppePatient)
-
-
-  puts "Bitte geben Sie den Vornamen des Spenders ein"
-
-  VornameSpender = gets.chomp
-
-  puts"Bitte geben Sie den Nachnamen des Spenders ein"
-
-  NachnameSpender = gets.chomp
-
-  puts"Bitte geben Sie das Alter des Spenders ein"
-
-  AlterSpender = gets.chomp
-
-  puts"Bitte geben Sie die Sozoialversicherungsnummer des Spenders ein"
-
-  SvnrSpender = gets.chomp
-
-  puts "Geben Sie bitte die Blutgruppe des Spenders wie folgt ein (A+, B+, A-, B-, AB-, AB+, 0-, 0+)"
-
-  BlutgruppeSpender = gets.chomp
-
-  if  abfrage_spender_blutgruppe(BlutgruppeSpender)
+  if abfrage_patient_blutgruppe(BlutgruppePatient)
 
 
-    if kompatibilitaet_blutgruppe(BlutgruppePatient, BlutgruppeSpender)
+    puts "Bitte geben Sie den Vornamen des Spenders ein"
 
-      puts"Wollen Sie ein Datum für die Operation eintragen [ja/nein]"
-      Antwort = gets.chomp
+    VornameSpender = gets.chomp
 
-      if Antwort == "ja" or Antwort == "nein"
+    puts"Bitte geben Sie den Nachnamen des Spenders ein"
 
-        if Antwort == "ja"
-          puts "Tragen Sie bitte ein Datum ein"
-          Datum = gets.chomp
-          puts"Geschafft! Die Operation findet am #{Datum} statt."
-          puts"Spender: #{VornameSpender} #{NachnameSpender} / Alter: #{AlterSpender} / Blutgruppe: #{BlutgruppeSpender} / Sozialversicherungsnummer: #{SvnrSpender}"
-          puts"Patient: #{VornamePatient} #{NachnamePatient} / Alter: #{AlterPatient} / Blutgruppe: #{BlutgruppePatient} / Sozialversicherungsnummer: #{SvnrPatient}"
+    NachnameSpender = gets.chomp
+
+    puts"Bitte geben Sie das Alter des Spenders ein"
+
+    AlterSpender = gets.chomp
+
+    puts"Bitte geben Sie die Sozoialversicherungsnummer des Spenders ein"
+
+    SvnrSpender = gets.chomp
+
+    puts "Geben Sie bitte die Blutgruppe des Spenders wie folgt ein (A+, B+, A-, B-, AB-, AB+, 0-, 0+)"
+
+    BlutgruppeSpender = gets.chomp
+
+    if  abfrage_spender_blutgruppe(BlutgruppeSpender)
+
+
+      if kompatibilitaet_blutgruppe(BlutgruppePatient, BlutgruppeSpender)
+
+        puts"Wollen Sie ein Datum für die Operation eintragen [ja/nein]"
+        Antwort = gets.chomp
+
+        if Antwort == "ja" or Antwort == "nein"
+
+          if Antwort == "ja"
+            puts "Tragen Sie bitte ein Datum ein"
+            Datum = gets.chomp
+            puts"Geschafft! Die Operation findet am #{Datum} statt."
+            puts"Spender: #{VornameSpender} #{NachnameSpender} / Alter: #{AlterSpender} / Blutgruppe: #{BlutgruppeSpender} / Sozialversicherungsnummer: #{SvnrSpender}"
+            puts"Patient: #{VornamePatient} #{NachnamePatient} / Alter: #{AlterPatient} / Blutgruppe: #{BlutgruppePatient} / Sozialversicherungsnummer: #{SvnrPatient}"
+          else
+            puts "Tragen Sie es bitte bald ein passendes Datum ein"
+          end
         else
-          puts "Tragen Sie es bitte bald ein passendes Datum ein"
+          puts "Keine gültige Antwort"
         end
-      else
-        puts "Keine gültige Antwort"
       end
     end
   end
-end
 end
