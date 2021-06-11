@@ -1,4 +1,4 @@
-require_relative '../Organspende.rb'
+require_relative '../organ_spende.rb'
 require 'minitest/autorun'
 
 

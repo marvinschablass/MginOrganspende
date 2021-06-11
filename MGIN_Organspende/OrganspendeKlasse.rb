@@ -1,4 +1,4 @@
-require_relative  './Organspende.rb'
+require_relative './gan_spende.rb'
 # frozen_string_literal: true
 
 organspende =Organspende.new
