@@ -1,5 +1,7 @@
-require_relative "./gan_spende.rb"
 # frozen_string_literal: true
+
+require_relative "./gan_spende.rb"
+
 
 organspende =Organspende.new
 puts "Bitte geben Sie den Vornamen des Patienten ein"
@@ -70,5 +72,3 @@ if organspende.abfrage_patient_blutgruppe(blutgruppePatient)
     end
   end
 end
-
-
