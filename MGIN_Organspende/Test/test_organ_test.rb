@@ -15,7 +15,7 @@ class TestOrganTest < Minitest::Test
   def test_kompatibel
     assert_equal(true , @organspende.kompatibilitaet_blutgruppe("A+", "A+"))
   end
-  def test_organspende1
+  def test_organspende11
     assert_nil(@organspende.abfrage_patient_blutgruppe("Haus"))
   end
 end
