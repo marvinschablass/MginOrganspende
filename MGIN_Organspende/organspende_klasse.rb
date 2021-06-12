@@ -61,6 +61,7 @@ if organspende.abfrage_patient_blutgruppe(blutgruppePatient)
           puts "Tragen Sie bitte ein Datum ein"
           Datum = gets.chomp
           puts"Geschafft! Die Operation findet am #{Datum} statt."
+          puts"Daten der Operation:"
           puts"Spender: #{VornameSpender} #{NachnameSpender} / Alter: #{AlterSpender} / Blutgruppe: #{BlutgruppeSpender} / Sozialversicherungsnummer: #{SvnrSpender}"
           puts"Patient: #{VornamePatient} #{NachnamePatient} / Alter: #{AlterPatient} / Blutgruppe: #{BlutgruppePatient} / Sozialversicherungsnummer: #{SvnrPatient}"
         else
