@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require_relative "../organ_spende.rb"
-require 'minitest/autorun'
+require "minitest/autorun"
 
-class Test_OrganTest < Minitest::Test
+class Test_Organ_Test < Minitest::Test
   def setup
     @organspende = Organspende.new
   end
