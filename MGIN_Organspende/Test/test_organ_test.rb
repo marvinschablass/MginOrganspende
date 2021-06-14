@@ -3,7 +3,7 @@
 require_relative "../organ_spende.rb"
 require "minitest/autorun"
 
-class Test_organ_test < Minitest::Test
+class TestOrganTest < Minitest::Test
   def setup
     @organspende = Organspende.new
   end
