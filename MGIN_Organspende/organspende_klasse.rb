@@ -4,11 +4,11 @@ require_relative "./organ_spende.rb"
 
 
 organspende =Organspende.new
-puts "Bitte geben Sie den Vornamen des Patienten ein"
+puts "Bitte geben Sie den Vornamen des Patienten ein."
 
 VornamePatient = gets.chomp
 
-puts"Bitte geben Sie den Nachnamen des Patienten ein"
+puts"Bitte geben Sie den Nachnamen des Patienten ein."
 
 NachnamePatient = gets.chomp
 
