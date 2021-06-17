@@ -11,3 +11,15 @@ VornamePatient = gets.chomp
 puts"Bitte geben Sie den Nachnamen des Patienten ein."
 
 NachnamePatient = gets.chomp
+
+puts"Bitte geben Sie das Alter des Patienten ein"
+
+AlterPatient = gets.chomp
+
+puts"Bitte geben Sie die Sozoialversicherungsnummer des Patienten ein"
+
+SvnrPatient = gets.chomp
+
+puts "Geben Sie bitte die Blutgruppe des Patienten wie folgt ein (A+, B+, A-, B-, AB-, AB+, 0-, 0+)"
+
+blutgruppePatient = gets.chomp
