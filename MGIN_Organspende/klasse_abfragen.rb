@@ -1,0 +1,2 @@
+class Klasse_Abfragen
+end
