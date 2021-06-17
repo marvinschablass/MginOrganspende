@@ -44,4 +44,17 @@ if organspende.abfrage_patient_blutgruppe(blutgruppePatient)
   puts "Geben Sie bitte die Blutgruppe des Spenders wie folgt ein (A+, B+, A-, B-, AB-, AB+, 0-, 0+)"
 
   blutgruppeSpender = gets.chomp
-end
+
+  if  organspende.abfrage_spender_blutgruppe(blutgruppeSpender)
+
+
+    if organspende.kompatibilitaet_blutgruppe(blutgruppePatient, blutgruppeSpender)
+
+      puts"Wollen Sie ein Datum für die Operation eintragen [ja/nein]"
+      Antwort = gets.chomp
+
+      if Antwort == "ja" or Antwort == "nein"
+      end
+    end
+  end
+  end
