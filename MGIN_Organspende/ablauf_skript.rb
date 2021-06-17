@@ -57,4 +57,4 @@ if organspende.abfrage_patient_blutgruppe(blutgruppePatient)
       end
     end
   end
-  end
+end
