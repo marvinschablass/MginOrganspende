@@ -1,7 +1,7 @@
 # frozen_string_literal: true
-require 'minitest/autorun'
+require "minitest/autorun"
 
-class Abfrage_testsTest < Minitest::Unit::TestCase
+class AbfrageTestsTest < Minitest::Unit::TestCase
   def setup
     # Do nothing
   end
@@ -11,6 +11,6 @@ class Abfrage_testsTest < Minitest::Unit::TestCase
   end
 
   def test
-    skip 'Not implemented'
+    skip "Not implemented"
   end
 end
