@@ -20,8 +20,4 @@ class AbfrageTestsTest < Minitest::Test
   def test_organspende1
     assert_nil(@klasseAbfrage.abfrage_patient_blutgruppe("Haus"))
   end
-
-  def test
-    skip "Not implemented"
-  end
 end
