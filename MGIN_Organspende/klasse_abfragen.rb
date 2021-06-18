@@ -8,5 +8,16 @@ class KlasseAbfragen
     else
       puts"Keine gültige Blutgruppe"
     end
+
+    def abfrage_spender_blutgruppe(blutgruppeSpender)
+      if blutgruppeSpender == "A+" or blutgruppeSpender == "A-" or blutgruppeSpender == "B+" or blutgruppeSpender == "B-" or blutgruppeSpender == "AB+" or blutgruppeSpender == "AB-" or blutgruppeSpender == "0+" or blutgruppeSpender == "0-"
+        return true
+
+      else
+        puts"Keine gültige Blutgruppe"
+
+      end
   end
-end
+  end
+
+  end
