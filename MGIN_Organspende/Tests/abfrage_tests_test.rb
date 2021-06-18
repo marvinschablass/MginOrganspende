@@ -3,14 +3,10 @@ require "minitest/autorun"
 
 class AbfrageTestsTest < Minitest::Unit::TestCase
   def setup
-    # Do nothing
+    @organspende = Organspende.new
   end
-
-  def teardown
-    # Do nothing
+  def test_organspende1
+    assert_equal(true , @organspende.abfrage_patient_blutgruppe("A+"))
+    #assert_equal true , true
   end
-
-  def test
-    skip "Not implemented"
   end
-end
