@@ -9,4 +9,9 @@ class AbfrageTestsTest < Minitest::Unit::TestCase
     assert_equal(true , @organspende.abfrage_patient_blutgruppe("A+"))
     #assert_equal true , true
   end
+  def test_kompatibel1
+    assert_equal(true , @organspende.kompatibilitaet_blutgruppe("A+", "A+"))
   end
+
+
+end
