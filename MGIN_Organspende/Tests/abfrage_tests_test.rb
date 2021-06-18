@@ -17,5 +17,7 @@ class AbfrageTestsTest < Minitest::Unit::TestCase
     assert_nil(@organspende.abfrage_patient_blutgruppe("Haus"))
   end
 
-
+  def test
+    skip "Not implemented"
+  end
 end
