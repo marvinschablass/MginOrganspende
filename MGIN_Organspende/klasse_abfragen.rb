@@ -8,24 +8,23 @@ class KlasseAbfragen
     else
       puts"Keine gültige Blutgruppe"
     end
-    end
+  end
 
-    def abfrage_spender_blutgruppe(blutgruppeSpender)
-      if blutgruppeSpender == "A+" or blutgruppeSpender == "A-" or blutgruppeSpender == "B+" or blutgruppeSpender == "B-" or blutgruppeSpender == "AB+" or blutgruppeSpender == "AB-" or blutgruppeSpender == "0+" or blutgruppeSpender == "0-"
-        return true
+  def abfrage_spender_blutgruppe(blutgruppeSpender)
+    if blutgruppeSpender == "A+" or blutgruppeSpender == "A-" or blutgruppeSpender == "B+" or blutgruppeSpender == "B-" or blutgruppeSpender == "AB+" or blutgruppeSpender == "AB-" or blutgruppeSpender == "0+" or blutgruppeSpender == "0-"
+      return true
 
-      else
-        puts"Keine gültige Blutgruppe"
-
-      end
-    end
-
-    def kompatibilitaet_blutgruppe(blutgruppePatient, blutgruppeSpender)
-      if blutgruppePatient == blutgruppeSpender or blutgruppePatient == "0+" or blutgruppeSpender =="0+" or  blutgruppeSpender or blutgruppePatient == "A+" or blutgruppeSpender =="A-" or  blutgruppeSpender or blutgruppePatient == "A+" or blutgruppeSpender =="B+"
-        return true
-
-      else
-        puts "Leider nicht kompatibel"
-      end
+    else
+      puts "Keine gültige Blutgruppe"
     end
   end
+
+  def kompatibilitaet_blutgruppe(blutgruppePatient, blutgruppeSpender)
+    if blutgruppePatient == blutgruppeSpender or blutgruppePatient == "0+" or blutgruppeSpender =="0+"
+      return true
+
+    else
+      puts "Leider nicht kompatibel"
+    end
+  end
+end
