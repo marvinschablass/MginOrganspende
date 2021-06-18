@@ -3,7 +3,9 @@
 require_relative "./klasse_abfragen.rb"
 
 
-organspende =Organspende.new
+
+klasseAbfrage = KlasseAbfragen.new
+
 puts "Bitte geben Sie den Vornamen des Patienten ein."
 
 VornamePatient = gets.chomp
@@ -24,7 +26,7 @@ puts "Geben Sie bitte die Blutgruppe des Patienten wie folgt ein (A+, B+, A-, B-
 
 blutgruppePatient = gets.chomp
 
-if organspende.abfrage_patient_blutgruppe(blutgruppePatient)
+if klasseAbfrage.abfrage_patient_blutgruppe(blutgruppePatient)
   puts "Bitte geben Sie den Vornamen des Spenders ein"
 
   VornameSpender = gets.chomp
@@ -45,10 +47,10 @@ if organspende.abfrage_patient_blutgruppe(blutgruppePatient)
 
   blutgruppeSpender = gets.chomp
 
-  if  organspende.abfrage_spender_blutgruppe(blutgruppeSpender)
+  if  klasseAbfrage.abfrage_spender_blutgruppe(blutgruppeSpender)
 
 
-    if organspende.kompatibilitaet_blutgruppe(blutgruppePatient, blutgruppeSpender)
+    if klasseAbfrage.kompatibilitaet_blutgruppe(blutgruppePatient, blutgruppeSpender)
 
       puts"Wollen Sie ein Datum für die Operation eintragen [ja/nein]"
       Antwort = gets.chomp
@@ -60,8 +62,8 @@ if organspende.abfrage_patient_blutgruppe(blutgruppePatient)
           Datum = gets.chomp
           puts"Geschafft! Die Operation findet am #{Datum} statt."
           puts"Daten der Operation:"
-          puts"Spender: #{VornameSpender} #{NachnameSpender} / Alter: #{AlterSpender} / Blutgruppe: #{BlutgruppeSpender} / Sozialversicherungsnummer: #{SvnrSpender}"
-          puts"Patient: #{VornamePatient} #{NachnamePatient} / Alter: #{AlterPatient} / Blutgruppe: #{BlutgruppePatient} / Sozialversicherungsnummer: #{SvnrPatient}"
+          puts"Spender: #{VornameSpender} #{NachnameSpender} / Alter: #{AlterSpender} / Blutgruppe: #{blutgruppeSpender} / Sozialversicherungsnummer: #{SvnrSpender}"
+          puts"Patient: #{VornamePatient} #{NachnamePatient} / Alter: #{AlterPatient} / Blutgruppe: #{blutgruppePatient} / Sozialversicherungsnummer: #{SvnrPatient}"
         else
           puts "Tragen Sie es bitte bald ein passendes Datum ein"
         end
