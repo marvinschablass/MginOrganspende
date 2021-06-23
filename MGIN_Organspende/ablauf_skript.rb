@@ -6,7 +6,7 @@ require_relative "./klasse_abfragen.rb"
 
 klasseAbfrage = KlasseAbfragen.new
 
-puts "Bitte geben Sie den Vornamen des Patienten ein."
+puts "Bitte geben Sie den Vornamen des Patienten1 ein."
 
 VornamePatient = gets.chomp
 
